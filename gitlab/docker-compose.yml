@@ -1,0 +1,25 @@
+version: '3'
+services:
+  gitlab-ce:
+    image: 'gitlab/gitlab-ce:latest'
+    restart: always
+    hostname: 'localhost'
+    environment:
+      TZ: Europe/London
+      GITLAB_OMNIBUS_CONFIG: |
+        external_url 'http://localhost'
+        gitlab_rails['monitoring_whitelist'] = ['127.0.0.1', '0.0.0.0/0']
+        prometheus['listen_address'] = '0.0.0.0:9090'
+    ports:
+      - '8080:80'
+      - '8443:443'
+      - '9090:9090'
+    volumes:
+      - './gitlab-config:/etc/gitlab'
+      - './gitlab-logs:/var/log/gitlab'
+#      - './gitlab-data:/var/opt/gitlab'
+
+networks:
+  default:
+    name: local_dev
+    external: true

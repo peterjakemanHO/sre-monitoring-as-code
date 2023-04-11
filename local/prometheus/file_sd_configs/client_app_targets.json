@@ -1,0 +1,38 @@
+[
+  {
+    "labels": {
+      "job": "prometheus-1",
+      "namespace": "localhost"
+    },
+    "targets": [
+      "prometheus-1:9090"
+    ]
+  },
+  {
+    "labels": {
+      "job": "prometheus-2",
+      "namespace": "localhost"
+    },
+    "targets": [
+      "prometheus-2:9090"
+    ]
+  },
+  {
+    "labels": {
+      "job": "nodejs",
+      "namespace": "localhost"
+    },
+    "targets": [
+      "nodejs:4001"
+    ]
+  },
+  {
+    "labels": {
+      "job": "gitlab",
+      "namespace": "localhost"
+    },
+    "targets": [
+      "gitlab-ce:9090"
+    ]
+  }
+]

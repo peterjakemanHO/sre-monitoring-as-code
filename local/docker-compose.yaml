@@ -243,3 +243,8 @@ services:
 #        ports:
 #            - 9106:9106
 #        restart: on-failure:5
+
+networks:
+    default:
+       name: local_dev
+       external: true

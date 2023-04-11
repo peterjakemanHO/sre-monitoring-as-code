@@ -47,3 +47,8 @@ services:
 volumes:
   db:
     driver: local
+
+networks:
+  default:
+    name: local_dev
+    external: true
