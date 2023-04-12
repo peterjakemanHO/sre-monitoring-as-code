@@ -15,7 +15,7 @@
     },
     sliTypesConfig: {
       latency: {
-        library: (import 'sli-value-libraries/histogram-quantile-latency.libsonnet'),
+        library: (import '../src/sli-value-libraries/histogram-quantile-latency.libsonnet'),
         description: 'Request latency for %(sliDescription)s should be below %(metricTarget)0.1fs for the %(latencyPercentile)0.0fth percentile',
         targetMetrics: {
           bucket: 'bucket',
@@ -23,7 +23,8 @@
           count: 'count',
         },
       },
-      detailDashboardConfig: {
+      },
+    detailDashboardConfig: {
       standardTemplates: ['resource'],
       elements: ['httpRequestsLatency'],
       targetMetrics: {
@@ -31,6 +32,6 @@
         requestBucket: 'bucket',
       },
     },
-    },
-  },
+},
 }
+// docker run --mount type=bind,source="$PWD"/mixin-defs,target=/input --mount type=bind,source="$PWD"/output,target=/output -it sre-monitoring-as-code:latest -m "gitlab" -rd -i input -o output

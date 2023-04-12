@@ -6,7 +6,7 @@ local mixinFunctions = import '../src/lib/mixin-functions.libsonnet';
 
 // Define product name and technow details
 local config = {
-  product: 'gitlab',
+  product: 'gitlab-ce',
   applicationServiceName: 'Monitoring and Logging Components',
   servicenowAssignmentGroup: 'HO_PLATFORM',
   // Alerts set to test only - remove/adjust once ready for alerts for production
@@ -18,9 +18,9 @@ local config = {
 };
 
 local sliSpecList = {
-  gitlab-ce: {
+  gitlab: {
     SLI01: {
-      title: 'gitlab-ce',
+      title: 'gitlab',
       sliDescription: 'Requests through gitlab-ce',
       period: '7d',
       metricType: 'gitlab_prometheus_http_request_duration_seconds',
