@@ -16,7 +16,7 @@
     },
     sliTypesConfig: {
       availability: {
-        library: (import 'sli-value-libraries/proportion-of-errors-using-label.libsonnet'),
+        library: (import '../src/sli-value-libraries/proportion-of-errors-using-label.libsonnet'),
         description: 'Error rate for %(sliDescription)s should be below %(metric_target_percent)0.1f%%',
         targetMetrics: {
           target: 'count',

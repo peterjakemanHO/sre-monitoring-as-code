@@ -26,10 +26,15 @@ local sliSpecList = {
       metricType: 'gitlab_prometheus_http_request_duration_seconds',
       evalInterval: '5m',
       selectors: {
-        product: '.*',
+        product: 'gitlab',
+        resource: '.*',
+        errorStatus: '4..|5..',
       },
       sloTarget: 90,
       sliTypes: {
+        availability: {
+          intervalTarget: 90,
+        },
         latency: {
           histogramSecondsTarget: 15,
           percentile: 90,
