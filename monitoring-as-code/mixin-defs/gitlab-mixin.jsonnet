@@ -24,10 +24,10 @@ local sliSpecList = {
       sliDescription: 'Requests through gitlab-ce',
       period: '7d',
       metricType: 'gitlab_prometheus_http_request_duration_seconds',
-      evalInterval: '5m',
+      evalInterval: '1m',
       selectors: {
         product: 'gitlab',
-        resource: '.*',
+        resource: '/.*',
         errorStatus: '4..|5..',
       },
       sloTarget: 90,
