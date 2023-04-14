@@ -6,7 +6,7 @@ local mixinFunctions = import '../src/lib/mixin-functions.libsonnet';
 
 // Define product name and technow details
 local config = {
-  product: 'gitlab-ce',
+  product: 'monitoring',
   applicationServiceName: 'Monitoring and Logging Components',
   servicenowAssignmentGroup: 'HO_PLATFORM',
   // Alerts set to test only - remove/adjust once ready for alerts for production
