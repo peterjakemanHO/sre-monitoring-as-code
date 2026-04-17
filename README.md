@@ -4,11 +4,13 @@
 ![Latest Release](https://img.shields.io/github/v/release/HO-CTO/sre-monitoring-as-code?display_name=tag&label=Latest%20Release)
 ![License](https://img.shields.io/github/license/HO-CTO/sre-monitoring-as-code?label=License)
 
+
 # sre-monitoring-as-code
 
 SRE Monitoring-as-Code (MaC) is a Jsonnet Mixin implementation of SLIs/SLO/Error Budgets using the open-source monitoring and alerting eco-system of Prometheus and Grafana. [Our documentation is available to view online](https://ho-cto.github.io/sre-monitoring-as-code/).
 
 ## About the framework
+
 
 Monitoring Mixins bundle up SLI configuration, Alerting, Grafana dashboards, and Runbooks into a single package. Engineers commit a monitoring definition file and this triggers the packaging of Prometheus Rules and Grafana Dashboards and injects them into the monitoring tools. This way, we can ease up engineers' burden of writing alerting rules, manually drawing up Grafana dashboards, and scribing runbooks.
 
