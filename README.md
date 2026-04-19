@@ -21,6 +21,10 @@ SRE Monitoring-as-Code (MaC) is a Jsonnet Mixin implementation of SLIs/SLO/Error
 
 
 
+
+
+
+
 Monitoring Mixins bundle up SLI configuration, Alerting, Grafana dashboards, and Runbooks into a single package. Engineers commit a monitoring definition file and this triggers the packaging of Prometheus Rules and Grafana Dashboards and injects them into the monitoring tools. This way, we can ease up engineers' burden of writing alerting rules, manually drawing up Grafana dashboards, and scribing runbooks.
 
 - Monitoring Mixins<sup>1</sup> are a lightweight flexible configuration, which don’t mandate specific labels or expressions. You can configure and overwrite everything.
